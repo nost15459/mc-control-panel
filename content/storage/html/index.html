@@ -1,5 +1,22 @@
+<!DOCTYPE html>
+<head>
+    <title>Item stock</title>
+</head>
 <html>
     <body>
-        <p>(index.html in html)Hello from index.html</p>
+        <h1>Item stock</h1>
+        <p id="item_stock">Loading...</p>
+        
+        <script>
+            async function fetchGameStatus() {
+                const response = await fetch("/api/status");
+                const data = await response.json()
+                document.getElementById("item_stock").innerText = `Item Stock: ${data.item_stock}`;
+            }
+            //3000ms
+            setInterval(fetchGameStatus, 3000)
+            fetchGameStatus();
+        </script>
+
     </body>
 </html>
