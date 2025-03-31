@@ -7,7 +7,6 @@
 	host = "127.0.0.1"
 	action = "allow"
 ```
-ひとまずローカルではクライアントとNGINXサーバーの通信はポート8081で行うことにする  
-[http://localhost:8081/storage](http://localhost:8081/storage)
 
-NGINXサーバー起動:`nginx -p $(pwd) -c conf/nginx.conf`
+ローカルテスト用
+[http://localhost:8081/storage](http://localhost:8081/storage)
