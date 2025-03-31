@@ -5,8 +5,6 @@ async function draw_table() {
     //re-create the whole table -> todo: implement partial update
     const table = document.createElement("table");
     
-    table.border = "2"; //todo: use CSS
-    
     if (Object.keys(inventory).length === 0) {
         // inventory is empty object
         container.innerHTML = "ME storage is empty, or no inventory data is available"
